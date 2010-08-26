@@ -14,18 +14,18 @@ This is a simple web application programmed in Scala, JDBC and SBT. The applicat
 
 to some app server. The file /WEB-INF/web.xml holds the configuration parameters for the database. The default settings are:
 
-   &lt;init-param>
-      &lt;param-name>db-server&lt;/param-name>
-      &lt;param-value>localhost&lt;/param-value>
-    &lt;/init-param>
-    &lt;init-param>
-      &lt;param-name>db-username&lt;/param-name>
-      &lt;param-value>simpleorder&lt;/param-value>
-    &lt;/init-param>
-    &lt;init-param>
-      &lt;param-name>db-password&lt;/param-name>
-      &lt;param-value>secret&lt;/param-value>
-    &lt;/init-param>
+   <init-param>
+      <param-name>db-server</param-name>
+      <param-value>localhost</param-value>
+    </init-param>
+    <init-param>
+      <param-name>db-username</param-name>
+      <param-value>simpleorder</param-value>
+    </init-param>
+    <init-param>
+      <param-name>db-password</param-name>
+      <param-value>secret</param-value>
+    </init-param>
 
 
 2. SimpleOrder needs a MySQL database with a database "simpleorder":
