@@ -1,0 +1,93 @@
+===================
+ SimpleOrder
+===================
+
+This is a simple web application programmed in Scala, JDBC and SBT. The application is meant to be a tutorial.
+
+===================
+ Installation
+===================
+
+1. You install this application by deploying the file: 
+
+  /bin/SimpleOrder.war
+
+to some app server. The file /WEB-INF/web.xml holds the configuration parameters for the database. The default settings are:
+
+   &lt;init-param>
+      &lt;param-name>db-server&lt;/param-name>
+      &lt;param-value>localhost&lt;/param-value>
+    &lt;/init-param>
+    &lt;init-param>
+      &lt;param-name>db-username&lt;/param-name>
+      &lt;param-value>simpleorder&lt;/param-value>
+    &lt;/init-param>
+    &lt;init-param>
+      &lt;param-name>db-password&lt;/param-name>
+      &lt;param-value>secret&lt;/param-value>
+    &lt;/init-param>
+
+
+2. SimpleOrder needs a MySQL database with a database "simpleorder":
+
+mysql> create database simpleorder;
+
+  ... and a user "simpleorder": 
+
+mysql> GRANT ALL
+    ON simpleorder.*
+    TO simpleorder@localhost
+    IDENTIFIED BY 'secret';
+
+  ... and a table "product_order":
+
+mysql> CREATE TABLE product_order (id INT NOT NULL AUTO_INCREMENT,
+  customer VARCHAR(100) NOT NULL,
+  product VARCHAR(100) NOT NULL,
+  quantity INT NOT NULL,
+  PRIMARY KEY (id)
+);
+
+You need to add some data too, try this:
+
+mysql> INSERT INTO product_order (customer, product, quantity)
+  VALUES ('Sven Ericsson', 'Paron', 1);
+  
+===================
+ Usage
+===================
+
+Let's say you deploy the JAR with the application name "a" at localhost port 80.
+
+Call this app like this:
+
+  http://localhost/a/
+
+... and you will see a HTML page that displays the content of the table "product_order".
+
+===================
+  Build the code 
+===================
+
+You need the following to build:
+
+* Scala 2.7.7 (To be able to run SBT)
+* SBT
+
+The code is depending on Scala 2.8.0, but this version will be downloaded by SBT during build.
+
+When you have sbt installed, just go to the root directory of this project and type:
+
+  bash$ sbt
+
+  sbt> update
+
+  sbt> compile
+
+  sbt> package
+
+Now you can find the packed WAR-file in this dir:
+
+  ./target/scala_2.8.0/simpleorder_2.8.0-1.0.war  
+
+
