@@ -6,7 +6,7 @@ object DaoUtil {
 
   private var driverLoaded = false
 
-  private def loadDriver  {
+  private def loadDriver()  {
     try{
       Class.forName("com.mysql.jdbc.Driver").newInstance
       driverLoaded = true
@@ -21,7 +21,7 @@ object DaoUtil {
   def getConnection(dbc: DbConnection): Connection =  {
     // Only load driver first time
     this.synchronized {
-      if(! driverLoaded) loadDriver
+      if(! driverLoaded) loadDriver()
     }
 
     // Get the connection

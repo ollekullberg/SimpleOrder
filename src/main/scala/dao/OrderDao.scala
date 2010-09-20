@@ -16,19 +16,19 @@ object OrderDao {
       try{
         val rs: ResultSet  = stmt.executeQuery(allOrdersSql)
         try {
-          while (rs.next) {
+          while (rs.next()) {
             val order = Order( rs.getString(1), rs.getString(2), 
                rs.getInt(3))
             orders += order
           }
         }finally{  
-          rs.close 
+          rs.close()
         }
       }finally{ 
-        stmt.close 
+        stmt.close()
       }
     }finally{ 
-      connection.close 
+      connection.close()
     }
     orders
   }

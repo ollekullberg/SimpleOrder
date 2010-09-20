@@ -7,7 +7,7 @@ object View {
 
   val htmlTop = 
   <HEAD> 
-    <TITLE>Simpel Order Application</TITLE>
+    <TITLE>Simple Order Application </TITLE>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
   </HEAD>
 
@@ -15,7 +15,7 @@ object View {
   def ordersToHtml(orders: Seq[Order]) = 
 <HTML lang="sv-SE" > { htmlTop }
   <BODY>
-    <H1>Simpel Order Application</H1>
+    <H1>Simple Order Application</H1>
     All orders:
     <HR/>
     <TABLE>
