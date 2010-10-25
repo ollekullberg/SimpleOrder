@@ -11,23 +11,23 @@ object OrderDao {
   def getAllOrders(dbc: DbConnection) = {
     val orders = collection.mutable.ListBuffer[Order]()
     val connection = DaoUtil.getConnection(dbc)
-    try{
+    try {
       val stmt: Statement = connection.createStatement
-      try{
+      try {
         val rs: ResultSet  = stmt.executeQuery(allOrdersSql)
         try {
           while (rs.next()) {
-            val order = Order( rs.getString(1), rs.getString(2), 
+            val order = Order(rs.getString(1), rs.getString(2), 
                rs.getInt(3))
             orders += order
           }
-        }finally{  
+        } finally {  
           rs.close()
         }
-      }finally{ 
+      } finally { 
         stmt.close()
       }
-    }finally{ 
+    } finally { 
       connection.close()
     }
     orders

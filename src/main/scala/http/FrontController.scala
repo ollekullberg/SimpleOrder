@@ -13,17 +13,18 @@ import com.programmera.simpleorder.view.View
 class FrontController extends HttpServlet {
 
   // General entry method for the servlet (Post and Get)
-  override def service(req : HttpServletRequest, 
-      resp : HttpServletResponse) ={
-    try{
+  override def service( 
+      req : HttpServletRequest, 
+      resp : HttpServletResponse) = {
+    try {
       // Do the work
       val html = processRequest(req)
       // Send response
-      resp.getWriter().print(html)
-    }catch{
+      resp.getWriter.print(html)
+    } catch {
       case e: Exception => {
-        val html = View.errorToHtml(e.getMessage())
-        resp.getWriter().print(html)
+        val html = View.errorToHtml(e.getMessage)
+        resp.getWriter.print(html)
       }
     }
   }
@@ -31,7 +32,7 @@ class FrontController extends HttpServlet {
   // Processes the request, might throw exception
   def processRequest(req : HttpServletRequest): String = {
     // Get the init parameters
-    val config= getServletConfig()
+    val config= getServletConfig
     val dbc= DbConnection( 
       config.getInitParameter("db-server"),
       config.getInitParameter("db-username"),

@@ -1,7 +1,8 @@
 import sbt._
 
-class SimpleOrderProject(info: ProjectInfo) extends DefaultWebProject(info) 
-{ 
+class SimpleOrderProject(info: ProjectInfo) 
+    extends DefaultWebProject(info) { 
+
   // Declare Servlet Dependency
   val servlet = "javax.servlet" % "servlet-api" % "2.5" % "provided"
 

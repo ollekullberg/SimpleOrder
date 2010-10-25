@@ -6,11 +6,11 @@ object DaoUtil {
 
   private var driverLoaded = false
 
-  private def loadDriver()  {
-    try{
+  private def loadDriver() {
+    try {
       Class.forName("com.mysql.jdbc.Driver").newInstance
       driverLoaded = true
-    }catch{
+    } catch {
       case e: Exception  => { 
         println("ERROR: Driver not available: " + e.getMessage)
         throw e
@@ -18,16 +18,16 @@ object DaoUtil {
     }
   }
   
-  def getConnection(dbc: DbConnection): Connection =  {
+  def getConnection(dbc: DbConnection): Connection = {
     // Only load driver first time
     this.synchronized {
       if(! driverLoaded) loadDriver()
     }
 
     // Get the connection
-    try{
+    try {
       DriverManager.getConnection(dbc.getConnectionString)
-    }catch{
+    } catch {
       case e: Exception  => {
         println("ERROR: No connection: " + e.getMessage)
         throw e

@@ -6,10 +6,10 @@ object View {
   import com.programmera.simpleorder.domain.Order
 
   val htmlTop = 
-  <HEAD> 
-    <TITLE>Simple Order Application </TITLE>
-    <META http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
-  </HEAD>
+<HEAD> 
+  <TITLE>Simple Order Application </TITLE>
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+</HEAD>
 
   // Generate HTML from the orders
   def ordersToHtml(orders: Seq[Order]) = 
@@ -21,7 +21,7 @@ object View {
     <TABLE>
       <TR><TH>Customer</TH><TH>Product</TH><TH>Quantity</TH></TR>
       {
-        for( o <- orders) yield 
+        for (o <- orders) yield 
           <TR><TD>{ o.customer }</TD><TD>{ o.product }</TD><TD>{ o.quantity 
           }</TD></TR>
       }
