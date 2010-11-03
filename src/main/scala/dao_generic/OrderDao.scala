@@ -10,9 +10,7 @@ object OrderDao {
 
   def getAllOrders(dbc: DbConnection): Seq[Order] = {
     val connection = DaoUtil.getConnection(dbc)
-    JdbcUtil.executeSelectQuery(connection, allOrdersSql) { 
-        rs: ResultSet => extractResults(rs)
-    }
+    JdbcUtil.executeSelectQuery(connection, allOrdersSql) { extractResults }
   }
 
   private def extractResults(rs: ResultSet): List[Order] =
