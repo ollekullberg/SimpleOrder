@@ -1,0 +1,6 @@
+<project version="4"><component name="ProjectModuleManager">
+      <modules>
+      <module fileurl="file://$PROJECT_DIR$/project/sbt_project_definition.iml" filepath="$PROJECT_DIR$/project/sbt_project_definition.iml"></module>
+      <module fileurl="file://$PROJECT_DIR$//SimpleOrder.iml" filepath="$PROJECT_DIR$//SimpleOrder.iml"></module>
+      </modules>
+    </component></project>

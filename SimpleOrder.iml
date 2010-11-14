@@ -1,0 +1,88 @@
+<module type="JAVA_MODULE" version="4">
+      <component name="FacetManager">
+        <facet type="scala" name="Scala">
+          <configuration>
+            <option value="Project" name="compilerLibraryLevel"></option>
+            <option value="buildScala" name="compilerLibraryName"></option>
+          </configuration>
+	    </facet>
+        <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" name="web.xml"></deploymentDescriptor>
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/"></root>
+        </webroots>
+      </configuration>
+    </facet>
+      </component>
+      <component inherit-compiler-output="false" name="NewModuleRootManager">
+        <output url="file://$MODULE_DIR$/target/scala_2.8.0/classes"></output><output-test url="file://$MODULE_DIR$/target/scala_2.8.0/test-classes"></output-test>
+        <exclude-output></exclude-output>
+        <content url="file://$MODULE_DIR$">
+          <sourceFolder isTestSource="false" url="file://$MODULE_DIR$/src/main/scala"></sourceFolder><sourceFolder isTestSource="false" url="file://$MODULE_DIR$/src/main/resources"></sourceFolder>
+          <sourceFolder isTestSource="true" url="file://$MODULE_DIR$/src/test/scala"></sourceFolder><sourceFolder isTestSource="true" url="file://$MODULE_DIR$/src/test/resources"></sourceFolder>
+          
+          <excludeFolder url="file://$MODULE_DIR$/target"></excludeFolder>
+        </content>
+        <orderEntry type="module-library" exported=" " scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/target/scala_2.8.0/test-resources"></root>
+        </CLASSES>
+        <JAVADOC>
+          
+          
+        </JAVADOC>
+        <SOURCES>
+          
+        </SOURCES>
+      </library>
+    </orderEntry><orderEntry exported=" " type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/target/scala_2.8.0/resources"></root>
+        </CLASSES>
+        <JAVADOC>
+          
+          
+        </JAVADOC>
+        <SOURCES>
+          
+        </SOURCES>
+      </library>
+    </orderEntry>
+        <orderEntry type="inheritedJdk"></orderEntry>
+        <orderEntry type="sourceFolder" forTests="false"></orderEntry>
+        <orderEntry level="project" type="library" name="buildScala"></orderEntry>
+        
+        <orderEntry type="module-library" exported=" " scope="PROVIDED">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib_managed/scala_2.8.0/provided/servlet-api-2.5.jar!/"></root>
+        </CLASSES>
+        <JAVADOC>
+          
+          
+        </JAVADOC>
+        <SOURCES>
+          
+        </SOURCES>
+      </library>
+    </orderEntry><orderEntry exported=" " type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib_managed/scala_2.8.0/compile/mysql-connector-java-5.1.12.jar!/"></root>
+        </CLASSES>
+        <JAVADOC>
+          
+          
+        </JAVADOC>
+        <SOURCES>
+          
+        </SOURCES>
+      </library>
+    </orderEntry>
+      </component>
+    </module>
